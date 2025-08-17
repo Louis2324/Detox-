@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Delay YouTube Shorts — Options</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 24px; }
+      label { display: block; margin-bottom: 8px; }
+      input[type=number] { width: 120px; padding: 6px; }
+      button { margin-top: 14px; padding: 8px 12px; border-radius: 8px; border: 0; cursor: pointer; }
+      .msg { margin-top: 12px; color: #2e7d32; }
+    </style>
+  </head>
+  <body>
+    <h1>Delay YouTube Shorts</h1>
+    <label>
+      Delay (seconds)
+      <input id="delay" type="number" min="0" step="1" />
+    </label>
+    <button id="save">Save</button>
+    <div id="msg" class="msg"></div>
+    <script src="options.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Delay YouTube Shorts",
+  "version": "2.0.0",
+  "description": "Delay any attempt to open YouTube Shorts.",
+  "permissions": ["storage"],
+  "host_permissions": ["*://*.youtube.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "options_page": "options.html",
+  "web_accessible_resources": [
+    {
+      "resources": ["delay.html", "delay.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
