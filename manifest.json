@@ -1,0 +1,18 @@
+{
+    "manifest_version":3,
+    "name":"Test - Latency",
+    "version":"1.0",
+    "permissions":[],
+    "content_scripts":[
+        {
+            "matches": ["https://www.youtube.com/shorts/*"],
+            "js":["youtube.js"],
+            "run_at": "document_idle"
+        },
+        {
+            "matches": ["https://www.instagram.com/reels/*"],
+            "js":["instagram.js"],
+            "run_at": "document_idle" 
+        }
+    ]
+}
