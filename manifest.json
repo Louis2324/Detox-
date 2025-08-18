@@ -1,18 +1,35 @@
 {
-    "manifest_version":3,
-    "name":"Test - Latency",
-    "version":"1.0",
-    "permissions":[],
-    "content_scripts":[
-        {
-            "matches": ["https://www.youtube.com/shorts/*"],
-            "js":["youtube.js"],
-            "run_at": "document_idle"
-        },
-        {
-            "matches": ["https://www.instagram.com/reels/*"],
-            "js":["instagram.js"],
-            "run_at": "document_idle" 
-        }
-    ]
+  "manifest_version": 3,
+  "name": "Delay YouTube Shorts (with Latency Tests)",
+  "version": "2.1.0",
+  "description": "Delay attempts to open YouTube Shorts, and add latency tests for Shorts and Reels.",
+  "permissions": ["storage"],
+  "host_permissions": ["*://*.youtube.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://www.youtube.com/shorts/*"],
+      "js": ["youtube.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://www.instagram.com/reels/*"],
+      "js": ["instagram.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_page": "options.html",
+  "web_accessible_resources": [
+    {
+      "resources": ["delay.html", "delay.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }
