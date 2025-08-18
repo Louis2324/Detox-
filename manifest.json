@@ -3,7 +3,7 @@
   "name": "Detox",
   "version": "2.1.0",
   "description": "Delay attempts to open YouTube Shorts, and add latency tests for Shorts and Reels.",
-  "permissions": ["storage"],
+  "permissions": ["storage","declarativeNetRequest"],
   "host_permissions": ["*://*.youtube.com/*"],
   "background": {
     "service_worker": "background.js"
@@ -26,6 +26,15 @@
     }
   ],
   "options_page": "options.html",
+  "declarative_net_request":{
+    "rule_resources" : [
+      {
+        "id":"rules",
+        "enabled":true,
+        "path":"rules.json"
+      }
+    ]
+  },
   "web_accessible_resources": [
     {
       "resources": ["delay.html", "delay.js"],
