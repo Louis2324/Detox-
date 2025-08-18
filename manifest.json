@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Delay YouTube Shorts (with Latency Tests)",
+  "name": "Detox",
   "version": "2.1.0",
   "description": "Delay attempts to open YouTube Shorts, and add latency tests for Shorts and Reels.",
   "permissions": ["storage"],
