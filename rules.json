@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": { "extensionPath": "/delay.html" }
+    },
+    "condition": {
+      "resourceTypes": ["main_frame", "sub_frame"],
+      "regexFilter": "^https?://([a-z0-9-]+\\.)?youtube\\.com/shorts/.*"
+    }
+  }
+]
