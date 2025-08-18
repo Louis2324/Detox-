@@ -10,11 +10,6 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*.youtube.com/*"],
-      "js": ["content.js"],
-      "run_at": "document_start"
-    },
-    {
       "matches": ["https://www.youtube.com/shorts/*"],
       "js": ["youtube.js"],
       "run_at": "document_idle"
